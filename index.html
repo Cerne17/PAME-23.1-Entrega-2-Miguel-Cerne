@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotfluxo</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="StyleSheet" href="styles.css">
     <script src="main.js" defer></script> <!--Defer serve para o código ser somente importado ao término da leitura do html, evitando bugs ao importar elementos, por exemplo-->
 </head>
 <body>
-    
+    <div id="header">
+        <img src="./assets/logo.png" id="logo" atl="logo"/>
+        <h1>Spotfluxo</h1>
+    </div>
+    <div id="form">
+        <form>
+            <h2>Entrar no Spotfluxo</h2>
+            <div class="elemento-do-formulario">
+                <button><img src="./assets/google.png" alt=""><h3>Continuar Com O Google</h3></button>
+            </div>
+            <div class="elemento-do-formulario">
+                <button><img src="./assets/facebook.png" alt=""><h3>Continuar Com O Facebook</h3></button>
+            </div>
+            <div class="elemento-do-formulario">
+                <button><img src="./assets/apple.png" alt=""><h3>Continuar Com A Apple</h3></button>
+            </div>
+            <div class="elemento-do-formulario">
+                <button><h3>Continuar Com Um Número De Telefone</h3></button>
+            </div>
+            <div class="elemento-do-formulario">
+                <label for="user">E-mail ou nome de usuário</label>
+                <!--Como eu quero que esse input consiga detectar emails e endereços de usuário, tenho que fazer essa validação por meio do js-->
+                <input type="text" id="user" name="user" placeholder="E-mail ou nome de usuário"> 
+            </div>
+            <div class="elemento-do-formulario">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Senha">
+            </div>
+            <div class="elemento-do-formulario">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Lembre de mim</label>
+            </div>
+            <div class="elemento-do-formulario">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
