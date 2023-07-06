@@ -1,3 +1,12 @@
+/* DECLARANDO VARIÁVEIS PARA FACILITAR A EDIÇÃO DO CÓDIGO */
+
+:root {
+    --fundo:      #000000;
+    --cinzaClaro: #252525;
+    --branco:       #fff;
+    --verde:        #00d857;
+}
+
 body {
     margin: 0px;
     border: 0px;
@@ -10,17 +19,13 @@ body {
     background-size: cover;
     
 }
-body::after {
-    background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgba(0, 0, 0, 0.65) 100%);
-}
-
 /* ELEMENTOS PRINCIPAIS */
 
 #header {
     width: 100%;
     height: 8vh;
     margin-bottom: 5vh;
-    background-color: #000000;
+    background-color: var(--fundo);
 
     /*PARA FORMATAR A LOGO E O NOME*/
     display: flex;
@@ -28,9 +33,9 @@ body::after {
 }
 
 #form > form {
-    width: 40vw;
+    width: 30vw;
     height: 80vh;
-    background-color: #000000;
+    background-color: var(--fundo);
     border-radius: 2vh;
     display: flex;
     color: white;
@@ -39,18 +44,76 @@ body::after {
     align-items: center;
 }
 
+.elemento-do-formulario {
+    width: 60%;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+}
+
+.botao-login {
+    width: 100%;
+    border: 2px solid var(--cinzaClaro);
+    border-radius: 40px;
+    color: white;
+    background-color: var(--fundo);
+    text-decoration: none;
+    border-radius: 5;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+#submit {
+    height: 60px;
+    background-color: var(--verde);
+    font-family: arial,helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--fundo);
+    justify-content: center;
+}
+
+.elemento-preencher {
+    display: flex;
+    flex-direction: column;
+    
+}
+
 /* ELEMENTOS SECUNDÁRIOS */
 
 #logo {
     height: 80%;
     margin-left: 1vw;
-    background-color: #fff;
+    background-color: var(--branco);
     filter: invert(100%);
 }
+/* #circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--branco);
+
+} */
 
 button > img {
-    height: 20px;
+    height: 40px;
 }
+
+/* .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+} */
 
 /* ESTILIZAÇÃO DE TAGS */
 
@@ -61,7 +124,9 @@ button > img {
     margin: 1vw;
     letter-spacing: 0.05rem;
 }
-h2 {
+#titulo {
     font-family: arial;
     color: white;
+    font-size: 30px;
+    letter-spacing: 0.1rem;
 }

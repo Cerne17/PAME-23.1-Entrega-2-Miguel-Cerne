@@ -9,30 +9,34 @@
 </head>
 <body>
     <div id="header">
+        <!-- <div class="container">
+            <img src="./assets/logo.png" id="logo" atl="logo"/>
+            <div id="circulo"></div>
+        </div> -->
         <img src="./assets/logo.png" id="logo" atl="logo"/>
         <h1>Spotfluxo</h1>
     </div>
     <div id="form">
         <form>
-            <h2>Entrar no Spotfluxo</h2>
+            <h2 id="titulo">Entrar no Spotfluxo</h2>
             <div class="elemento-do-formulario">
-                <button><img src="./assets/google.png" alt=""><h3>Continuar Com O Google</h3></button>
+                <button class="botao-login"><img src="./assets/google.png" alt=""><h3>Continuar Com O Google</h3></button>
             </div>
             <div class="elemento-do-formulario">
-                <button><img src="./assets/facebook.png" alt=""><h3>Continuar Com O Facebook</h3></button>
+                <button class="botao-login"><img src="./assets/facebook.png" alt=""><h3>Continuar Com O Facebook</h3></button>
             </div>
             <div class="elemento-do-formulario">
-                <button><img src="./assets/apple.png" alt=""><h3>Continuar Com A Apple</h3></button>
+                <button class="botao-login"><img src="./assets/apple.png" alt=""><h3>Continuar Com A Apple</h3></button>
             </div>
             <div class="elemento-do-formulario">
-                <button><h3>Continuar Com Um Número De Telefone</h3></button>
+                <button class="botao-login"><h3>Continuar Com Um Número De Telefone</h3></button>
             </div>
-            <div class="elemento-do-formulario">
+            <div class="elemento-do-formulario elemento-preencher">
                 <label for="user">E-mail ou nome de usuário</label>
                 <!--Como eu quero que esse input consiga detectar emails e endereços de usuário, tenho que fazer essa validação por meio do js-->
                 <input type="text" id="user" name="user" placeholder="E-mail ou nome de usuário"> 
             </div>
-            <div class="elemento-do-formulario">
+            <div class="elemento-do-formulario elemento-preencher">
                 <label for="password">Senha</label>
                 <input type="password" id="password" name="password" placeholder="Senha">
             </div>
@@ -40,8 +44,8 @@
                 <input type="checkbox" id="remember" name="remember">
                 <label for="remember">Lembre de mim</label>
             </div>
-            <div class="elemento-do-formulario">
-                <button type="submit">Enviar</button>
+            <div class="elemento-do-formulario" >
+                <button type="submit" class="botao-login"id="submit">Enviar</button>
             </div>
         </form>
     </div>
