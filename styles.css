@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("./assets/background.jpeg");
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url("./assets/background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -30,6 +30,7 @@ body {
     height: 5vh;
     margin-bottom: 2vh;
     background-color: var(--fundo);
+    box-shadow: 0 1px 20px 1px rgba(255,255,255,0.2);
 
     /*PARA FORMATAR A LOGO E O NOME*/
     display: flex;
