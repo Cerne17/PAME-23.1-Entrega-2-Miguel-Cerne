@@ -19,7 +19,7 @@ class Informations {
 
         // Checa se o usuário inseriu um email ou um usuário, para formatar a mensagem de alerta
 
-        if (this.user.includes('@')) {
+        if (this.user.value.includes('@')) {
             return "E-mail: ";
         } else {
             return "Nome de Usuário: "
@@ -44,17 +44,22 @@ class Informations {
     alerta () {
 
         if (this.validacaoForm()) {
-            let mensagem = `${this.checarTipoUsuario()}${this.user}\nSenha: ${this.password}\nLembrar de mim: ${this.checkbox}`;
-            alert(mensagem);
+            
+            const usuario = this.user.value;
+            const senha = this.password.value;
+            const lembrar = this.checkbox.value;
 
+            let mensagem = `${this.checarTipoUsuario()}${usuario}\nSenha: ${senha}\nLembrar de mim: ${lembrar}`;
+            
             // Exibição da mensagem de sucesso e omissão da de erro:
-
+            
             if (Array.from(this.sucesso.classList).includes("hidden")) {
                 this.sucesso.classList.remove("hidden");
             }
             if (!Array.from(this.falha.classList).includes("hidden")) {
                 this.falha.classlist.addClass("hidden");
             }
+            alert(mensagem);
         } else {
             
             // Exibição da mensagem de erro e omissão da de sucesso:
@@ -68,8 +73,9 @@ class Informations {
         }
 
         // Atualização dos estados dos botões:
-        this.sucesso = document.getElementById("sucesso");
-        this.falha   = document.getElementById("falha");
+        this.sucesso  = document.getElementById("sucesso");
+        this.falha    = document.getElementById("falha");
+        this.checkbox = document.getElementById("checkbox");
 
     }
 }
