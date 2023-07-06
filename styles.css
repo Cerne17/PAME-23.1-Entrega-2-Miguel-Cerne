@@ -129,6 +129,7 @@ body {
     font-size: 12px;
     color: var(--whiteSmoke);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .check {
@@ -256,10 +257,12 @@ input:checked[type="checkbox"]:before {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: 0.6s;
 }
 
 /* CLASSE HIDDEN: CONTROLADA PELO JS PARA MOSTRAR AS MENSAGENS DE FALHA/SUCESSO */
 .hidden {
     color: transparent;
-    opacity: 0;
+    display: none;
+    
 }
