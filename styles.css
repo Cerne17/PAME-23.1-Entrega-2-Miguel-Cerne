@@ -8,6 +8,8 @@
     --branco:         #fff;
     --verde:          #00d857;
     --verdeEscuro:    #139246;
+    --verdePastel:    #3fc173;
+    --vermelhoPastel: #c13f3f;
     --whiteSmoke:     #FAFAFA;
 }
 
@@ -21,12 +23,21 @@ body {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url("./assets/background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    
+    height: 100vh;
 }
+
+#background {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* ELEMENTOS PRINCIPAIS */
 
 #header {
-    width: 100%;
+    width: 100vw;
     height: 5vh;
     margin-bottom: 2vh;
     background-color: var(--fundo);
@@ -51,8 +62,8 @@ body {
 
 .elemento-do-formulario {
     width: 60%;
-    height: 8%;
-    font-size: 16px;
+    height: 6%;
+    font-size: 14px;
     font-weight: normal;
     display: flex;
     justify-content: center;
@@ -105,7 +116,8 @@ body {
     border: 2px solid var(--cinzaClaro);
     color: var(--whiteSmoke);
     padding-left: 15px;
-    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     border-radius: 5px;
 
@@ -221,4 +233,33 @@ input[type="checkbox"]:before {
 }
 input:checked[type="checkbox"]:before {
     left: 20px;
+}
+
+/* ESTILIZAÇÃO DA MENSAGEM DE CONFIRMAÇÃO E DE FALHA*/
+
+#sucesso, #falha {
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#sucesso {
+    color: var(--verdePastel);
+}
+
+#falha {
+    color: var(--vermelhoPastel);
+}
+
+#texto-checagem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* CLASSE HIDDEN: CONTROLADA PELO JS PARA MOSTRAR AS MENSAGENS DE FALHA/SUCESSO */
+.hidden {
+    color: transparent;
+    opacity: 0;
 }

@@ -8,53 +8,56 @@
     <script src="main.js" defer></script> <!--Defer serve para o código ser somente importado ao término da leitura do html, evitando bugs ao importar elementos, por exemplo-->
 </head>
 <body>
-    <div id="header">
-        <!-- <div class="container">
+    <div id="background">
+        <div id="header">
             <img src="./assets/logo.png" id="logo" atl="logo"/>
-            <div id="circulo"></div>
-        </div> -->
-        <img src="./assets/logo.png" id="logo" atl="logo"/>
-        <h1>Spotfluxo</h1>
-    </div>
-    <div id="form">
-        <form>
-            <h2 id="titulo">Entrar no Spotfluxo</h2>
-            <div class="elemento-do-formulario">
-                <button class="botao-login"><img src="./assets/google.png" alt=""><h3>Continuar Com O Google</h3></button>
-            </div>
-            <div class="elemento-do-formulario">
-                <button class="botao-login"><img src="./assets/facebook.png" alt=""><h3>Continuar Com O Facebook</h3></button>
-            </div>
-            <div class="elemento-do-formulario">
-                <button class="botao-login"><img src="./assets/apple.png" alt=""><h3>Continuar Com A Apple</h3></button>
-            </div>
-            <div class="elemento-do-formulario">
-                <button class="botao-login"><h3>Continuar Com Um Número De Telefone</h3></button>
-            </div>
-            <div class="elemento-do-formulario elemento-preencher">
-                <label for="user">E-mail ou nome de usuário</label>
-                <!--Como eu quero que esse input consiga detectar emails e endereços de usuário, tenho que fazer essa validação por meio do js-->
-                <input type="text" id="user" name="user" class="campos" placeholder="E-mail ou nome de usuário" required> 
-            </div>
-            <div class="elemento-do-formulario elemento-preencher">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" class="campos" placeholder="Senha" required>
-            </div>
-            <div class="elemento-do-formulario check">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Lembrar de mim</label>
-            </div>
-            <div class="elemento-do-formulario" >
-                <button type="submit" class="botao-login"id="submit">Enviar</button>
-            </div>
-            <div class="elemento-do-formulario" >
-                <button id="esqueceu">Esqueceu sua senha?</button>
-            </div>
-            <div class="elemento-do-formulario container-sem-conta" >
-                <label for="sem-conta">Não tem uma conta?</label>
-                <button name="sem-conta" id="sem-conta">Inscreva-se no Spotfluxo</button>
-            </div>
-        </form>
+            <h1>Spotfluxo</h1>
+        </div>
+        <div id="form">
+            <form>
+                <h2 id="titulo">Entrar no Spotfluxo</h2>
+                <div class="elemento-do-formulario">
+                    <button class="botao-login"><img src="./assets/google.png" alt=""><h3>Continuar Com O Google</h3></button>
+                </div>
+                <div class="elemento-do-formulario">
+                    <button class="botao-login"><img src="./assets/facebook.png" alt=""><h3>Continuar Com O Facebook</h3></button>
+                </div>
+                <div class="elemento-do-formulario">
+                    <button class="botao-login"><img src="./assets/apple.png" alt=""><h3>Continuar Com A Apple</h3></button>
+                </div>
+                <div class="elemento-do-formulario">
+                    <button class="botao-login"><h3>Continuar Com Um Número De Telefone</h3></button>
+                </div>
+                <div class="elemento-do-formulario elemento-preencher">
+                    <label for="user">E-mail ou nome de usuário</label>
+                    <!--Como eu quero que esse input consiga detectar emails e endereços de usuário, tenho que fazer essa validação por meio do js-->
+                    <input type="text" id="user" name="user" class="campos" placeholder="E-mail ou nome de usuário" required> 
+                </div>
+                <div class="elemento-do-formulario elemento-preencher">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" class="campos" placeholder="Senha" required>
+                </div>
+                <div class="elemento-do-formulario check">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Lembrar de mim</label>
+                </div>
+                <div class="elemento-do-formulario" >
+                    <button type="submit" class="botao-login"id="submit">Enviar</button>
+                </div>
+                <div class="elemento-do-formulario" >
+                    <button id="esqueceu">Esqueceu sua senha?</button>
+                </div>
+                <div class="elemento-do-formulario" id="texto-checagem">
+                    <p id="sucesso" class="hidden">Login enviado com sucesso!</p>
+                    <p id="falha" class="hidden">Você tem que preencher todos os campos antes de enviar!</p>
+                </div>
+
+                <div class="elemento-do-formulario container-sem-conta" >
+                    <label for="sem-conta">Não tem uma conta?</label>
+                    <button name="sem-conta" id="sem-conta">Inscreva-se no Spotfluxo</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
