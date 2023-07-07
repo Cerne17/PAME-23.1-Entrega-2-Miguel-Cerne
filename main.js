@@ -1,12 +1,5 @@
 "use strict";
 
-// function getValues() {
-//     const user     = getElementById("user");
-//     const password = getElementById("password");
-//     const checkbox = getElementById("remember");
-//     return
-// }
-
 class Informations {
     constructor() {
         this.user     = document.getElementById("user");
@@ -40,19 +33,17 @@ class Informations {
         }
         return validacao;
     }
-
     alerta () {
 
         if (this.validacaoForm()) {
             
             const usuario = this.user.value;
             const senha = this.password.value;
-            const lembrar = this.checkbox.value;
+            const lembrar = this.checkbox.checked;
 
             let mensagem = `${this.checarTipoUsuario()}${usuario}\nSenha: ${senha}\nLembrar de mim: ${lembrar}`;
             
             // Exibição da mensagem de sucesso e omissão da de erro:
-            
             if (Array.from(this.sucesso.classList).includes("hidden")) {
                 this.sucesso.classList.remove("hidden");
             }
@@ -63,11 +54,12 @@ class Informations {
         } else {
             
             // Exibição da mensagem de erro e omissão da de sucesso:
-
             if (!Array.from(this.sucesso.classList).includes("hidden")) {
+                console.log("rodou 1");
                 this.sucesso.classList.remove("hidden");
             }
             if (Array.from(this.falha.classList).includes("hidden")) {
+                console.log("rodou 2");
                 this.falha.classlist.addClass("hidden");
             }
         }
@@ -81,7 +73,9 @@ class Informations {
 }
 
 document.getElementById("formulario").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita falsas ativações do botão
+    event.preventDefault(); // Impede o envio do formulário
+
     const informacoes = new Informations();
     informacoes.alerta();
+
 });
