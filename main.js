@@ -2,11 +2,13 @@
 
 class Informations {
     constructor() {
-        this.user     = document.getElementById("user");
-        this.password = document.getElementById("password");
-        this.checkbox = document.getElementById("remember");
-        this.sucesso  = document.getElementById("sucesso");
-        this.falha    = document.getElementById("falha");
+        this.user          = document.getElementById("user");
+        this.password      = document.getElementById("password");
+        this.checkbox      = document.getElementById("remember");
+        this.sucesso       = document.getElementById("sucesso");
+        this.falha         = document.getElementById("falha");
+        this.verSenha      = document.getElementById("mostrar-senha");
+        this.iconeVerSenha = document.getElementById("mostrar-senha-img");
     }
     checarTipoUsuario () {
 
@@ -64,11 +66,23 @@ class Informations {
             }
         }
 
+        
         // Atualização dos estados dos botões:
         this.sucesso  = document.getElementById("sucesso");
         this.falha    = document.getElementById("falha");
         this.checkbox = document.getElementById("checkbox");
+        
+    }
 
+    mudarVisibilidadeSenha () {
+        if (this.senha.type === "password") {
+            this.senha.type = "text";
+            this.iconeVerSenha.setAttribute("src", "./assets/naoVisualizar.png");
+            
+        } else {
+            this.senha.type = "password";
+            this.iconeVerSenha.setAttribute("src", "./assets/Visualizar.png");
+        }
     }
 }
 
@@ -78,4 +92,15 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     const informacoes = new Informations();
     informacoes.alerta();
 
+});
+
+// Para funcionalidade de visualizar senha:
+window.addEventListener("DOMContentLoaded", function () {
+    
+    document.getElementById("verSenha").addEventListener("click", function () {
+
+        let informacoes = new Informations();
+        informacoes.mudarVisibilidadeSenha();
+
+    });
 });
